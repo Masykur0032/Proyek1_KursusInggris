@@ -34,32 +34,32 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Title:</strong>
-                    <input type="text" name="title" value="{{ $post->title }}" class="form-control" placeholder="Title">
+                    <input type="text" name="title" value="{{ $post->title }}" class="form-control" placeholder="Title" style="border-color: #D8005F;">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Link:</strong>
-                    <input type="text" name="link" value="{{ $post->link }}" class="form-control" placeholder="Link">
+                    <input type="text" name="link" value="{{ $post->link }}" class="form-control" placeholder="Link" style="border-color: #D8005F;">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Image:</strong>
-                    <input type="file" name="image" class="form-control" placeholder="image">
+                    <input type="file" name="image" class="form-control" placeholder="image" style="border-color: #D8005F;">
                     <img src="/image/{{ $post->image }}" width="300px">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Body:</strong>
-                    <textarea class="form-control" style="height:150px" name="body" placeholder="Body">{{ $post->body }}</textarea>
+                    <textarea class="form-control" style="border-color: #D8005F; height:150px" name="body" placeholder="Body">{{ $post->body }}</textarea>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Detail:</strong>
-                    <textarea class="form-control" style="height:150px" name="detail" placeholder="Detail">{{ $post->detail }}</textarea>
+                    <textarea class="form-control" style="border-color: #D8005F; height:150px" name="detail" placeholder="Detail">{{ $post->detail }}</textarea>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">

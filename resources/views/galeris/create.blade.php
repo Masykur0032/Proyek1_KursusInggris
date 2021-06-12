@@ -31,13 +31,13 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Image:</strong>
-                <input type="file" name="image" class="form-control" placeholder="image">
+                <input type="file" name="image" class="form-control" placeholder="image" style="border-color: #D8005F;">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Keterangan:</strong>
-                <input type="text" name="keterangan" class="form-control" placeholder="Keterangan">
+                <input type="text" name="keterangan" class="form-control" placeholder="Keterangan" style="border-color: #D8005F;">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">

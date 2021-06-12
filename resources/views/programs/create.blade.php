@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Create Post Beranda')
+@section('title', 'Create Post Program')
 
 @section('content')
 <div class="row">
@@ -8,7 +8,7 @@
             <h2>Add New Post</h2>
         </div>
         <div class="pull-right">
-            <a class="btn btn-primary" href="{{ route('posts.index') }}"> Back</a>
+            <a class="btn btn-primary" href="{{ route('programs.index') }}"> Back</a>
         </div>
     </div>
 </div>
@@ -24,7 +24,7 @@
     </div>
 @endif
      
-<form action="{{ route('posts.store') }}" method="POST" enctype="multipart/form-data">
+<form action="{{ route('programs.store') }}" method="POST" enctype="multipart/form-data">
     @csrf
     
      <div class="row">
@@ -32,12 +32,6 @@
             <div class="form-group">
                 <strong>Title:</strong>
                 <input type="text" name="title" class="form-control" placeholder="Title" style="border-color: #D8005F;">
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Link:</strong>
-                <input type="text" name="link" class="form-control" placeholder="Link" style="border-color: #D8005F;">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
@@ -50,12 +44,6 @@
             <div class="form-group">
                 <strong>Body:</strong>
                 <textarea class="form-control" style="border-color: #D8005F; height:150px" name="body" placeholder="Body"></textarea>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Detail:</strong>
-                <textarea class="form-control" style="border-color: #D8005F; height:150px" name="detail" placeholder="Detail"></textarea>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">

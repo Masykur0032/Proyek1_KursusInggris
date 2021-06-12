@@ -5,12 +5,12 @@
 
 @section('content')
 
-<table style="width: 90%; background-color:transparent;" align="center">
+<table style="width: 98%; background-color:transparent;" align="center">
 <tr>
     <td>
         <div class="row">
             @foreach ($galeri as $galeri)
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div class="card mb-4">
                     <p class="cntn" style="text-align:center;">
                         @if($galeri->image)

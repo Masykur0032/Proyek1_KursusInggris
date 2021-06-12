@@ -1,15 +1,15 @@
 @extends('layouts.app')
-@section('title', 'Galeri')
+@section('title', 'Program')
 @include('layouts.nav')
 
 @section('content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>NTC Kursus Inggris | Galeri</h2>
+                <h2>NTC Kursus Inggris | Program</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('galeris.create') }}"> Create New Post</a>
+                <a class="btn btn-success" href="{{ route('programs.create') }}"> Create New Post</a>
             </div>
         </div>
     </div>
@@ -23,21 +23,23 @@
     <table class="table table-bordered">
         <tr>
             <th>No</th>
+            <th>Title</th>
             <th>Image</th>
-            <th>Keterangan</th>
+            <th>Body</th>
             <th>Action</th>
         </tr>
-        @foreach ($galeris as $galeri)
+        @foreach ($programs as $program)
         <tr>
             <td>{{ ++$i }}</td>
-            <td><img src="/image/{{ $galeri->image }}" width="100px"></td>
-            <td>{{ $galeri->keterangan }}</td>
+            <td>{{ $program->title }}</td>
+            <td><img src="/image/{{ $program->image }}" width="100px"></td>
+            <td>{{ Str::limit($program->body, 50,'...') }}</td>
             <td>
-                <form action="{{ route('galeris.destroy',$galeri->id) }}" method="POST">
+                <form action="{{ route('programs.destroy',$program->id) }}" method="POST">
      
-                    <a class="btn btn-info" style="width: 80px; border: 1px solid white;" href="{{ route('galeris.show',$galeri->id) }}">Show</a> <br>
+                    <a class="btn btn-info" style="width: 80px; border: 1px solid white;" href="{{ route('programs.show',$program->id) }}">Show</a> <br>
       
-                    <a class="btn btn-primary" style="width: 80px; border: 1px solid white;" href="{{ route('galeris.edit',$galeri->id) }}">Edit</a> <br>
+                    <a class="btn btn-primary" style="width: 80px; border: 1px solid white;" href="{{ route('programs.edit',$program->id) }}">Edit</a> <br>
      
                     @csrf
                     @method('DELETE')
@@ -49,6 +51,6 @@
         @endforeach
     </table>
     
-    {!! $galeris->links() !!}
+    {!! $programs->links() !!}
         
 @endsection

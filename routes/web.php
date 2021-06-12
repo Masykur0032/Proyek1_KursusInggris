@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\GaleriController;
+use App\Http\Controllers\ProgramController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\AuthController;
@@ -29,7 +30,7 @@ Route::get('/', 'App\Http\Controllers\PostController@keberanda');
 
 Route::view('/profil', 'profil');
 //Route::view('/galeri', 'galeri');
-Route::view('/program', 'program');
+Route::get('/program', 'App\Http\Controllers\ProgramController@keprogram');
 //Route::view('/contact', 'contact_us');
 Route::get('/galeri', 'App\Http\Controllers\GaleriController@kegaleri');
 
@@ -37,6 +38,8 @@ Route::resource('posts', PostController::class);
 //Route::get('/posts', [PostController::class, 'index']);
 
 Route::resource('galeris', GaleriController::class);
+
+Route::resource('programs', ProgramController::class);
 
 Route::get('/contact', 'App\Http\Controllers\Contact@showContactForm');
 Route::post('/contact', 'App\Http\Controllers\Contact@sendMail');
@@ -51,7 +54,7 @@ Route::post('register', [AuthController::class, 'register']);
 Route::group(['middleware' => 'auth'], function () {
  
     //Route::get('beranda', [HomeController::class, 'index'])->name('beranda');
-    Route::get('beranda', [PostController::class, 'keberanda'])->name('beranda');
+    Route::get('beranda', [PostController::class, 'index'])->name('beranda');
     Route::get('logout', [AuthController::class, 'logout'])->name('logout');
  
 });

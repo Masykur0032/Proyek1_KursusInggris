@@ -8,7 +8,7 @@
     <title>NTC Kursus Inggris: @yield('title')</title>
     <style>
         body{
-            background-image: url("https://www.marketplace.org/wp-content/uploads/2021/01/Books_New-e1611252343470.jpg?fit=2879%2C1619");
+            background-color: #9587CF;
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -16,9 +16,9 @@
             height: 100%;
         }
         #tblcontent{
-            border-radius: 5px 30px;
+            border-radius: 5px 5px;
             background: rgba(255, 255, 255, 0.7);
-            width: 98%;
+            width: 99%;
         }
         .cntn{
             text-align: justify;
@@ -31,13 +31,13 @@
             text-align: justify;
             padding-left: 10px;
             padding-right: 10px;
-            font-size: 20px;
+            font-size: 22px;
             font-weight: bold;
             font-family:'Adobe Devagnari';
         }
         .cntnsecond{
             text-align: justify;
-            padding-left: 30px;
+            padding-left: 10px;
             padding-right: 10px;
             color: #D8005F;
             font-size: 15px;
@@ -51,7 +51,7 @@
         color: white;
         }
         a:hover {
-        color: #D8005F;
+        color: white;
         font-weight: bold;
         }
     </style>
@@ -70,7 +70,10 @@
     </table>
 
     <br>
+
+    @yield('content')
     
+    <!--
     <table id="tblcontent" align="center">
         <tr>
             <td>
@@ -78,9 +81,9 @@
             </td>
         </tr>
     </table>
+    -->
 
-    <br>
-    <table style="width:100%; background-color:#4D4378;">
+    <table style="width:100%; background-color:#D8005F;">
         <tr>
             <td width="30%">&emsp;<a href="https://docs.google.com/forms/d/e/1FAIpQLScW7viahhnBqPd3k2Xgx3ztQBCU5aIlr7WyEyVWNLZUAClytw/closedform">Formulir</a></td>
             <td width="30%">&emsp;<a href="program">Program</a></td>

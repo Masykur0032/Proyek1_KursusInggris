@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('title', 'Beranda')
+@include('layouts.nav')
 
 @section('content')
     <div class="row">

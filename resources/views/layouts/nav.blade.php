@@ -1,6 +1,6 @@
 <style>
 .dropbtn {
-  background-color: #4D4378;
+  background-color: #9587CF;
   color: white;
   padding: 9px;
   font-size: 16px;
@@ -15,7 +15,7 @@
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #4D4378;
+  background-color: #9587CF;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -28,7 +28,7 @@
   display: block;
 }
 
-.dropdown-content a:hover {background-color: #D8005F;}
+.dropdown-content a:hover {background-color: #D8005F; text-decoration: none;}
 
 .dropdown:hover .dropdown-content {display: block;}
 
@@ -48,6 +48,9 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto" style="font-family:'Adobe Devagnari';">
+                      
+
+                      @guest
                       <li>
                         @if (\Request::is('profil'))
                         <a href="/profil" class="nav-link" style="font-weight: bold; color: #4D4378">PROFIL</a>
@@ -86,27 +89,34 @@
                         <a href="/contact" class="nav-link">CONTACT US</a>
                         @endif
                       </li>
-
-                      @guest
-                            <li class="nav-item{{ request()->is('login') ? ' active' : '' }}">
+                      <!--
+                      <li class="nav-item{{ request()->is('login') ? ' active' : '' }}">
                                 <a href="{{ route('login') }}"><button class="dropbtn">{{ __('Login') }}</button></a>
                                 
-                            </li>
+                            </li> 
+                            -->
                         @else
                         <li>
-                        @if (\Request::is('posts'))
-                        <a href="/posts" class="nav-link" style="font-weight: bold; color: #4D4378">POST BERANDA</a>
-                        @else
-                        <a href="/posts" class="nav-link">POST BERANDA</a>
-                        @endif
-                      </li>
-                      <li>
-                        @if (\Request::is('galeris'))
-                        <a href="/galeris" class="nav-link" style="font-weight: bold; color: #4D4378">POST GALERI</a>
-                        @else
-                        <a href="/galeris" class="nav-link">POST GALERI</a>
-                        @endif
-                      </li>
+                          @if (\Request::is('posts'))
+                          <a href="/posts" class="nav-link" style="font-weight: bold; color: #4D4378">BERANDA</a>
+                          @else
+                          <a href="/posts" class="nav-link">BERANDA</a>
+                          @endif
+                        </li>
+                        <li>
+                          @if (\Request::is('galeris'))
+                          <a href="/galeris" class="nav-link" style="font-weight: bold; color: #4D4378">GALERI</a>
+                          @else
+                          <a href="/galeris" class="nav-link">GALERI</a>
+                          @endif
+                        </li>
+                        <li>
+                          @if (\Request::is('programs'))
+                          <a href="/programs" class="nav-link" style="font-weight: bold; color: #4D4378">PROGRAM</a>
+                          @else
+                          <a href="/programs" class="nav-link">PROGRAM</a>
+                          @endif
+                        </li>
 
                         <div class="dropdown">
                           <button class="dropbtn">{{ Auth::user()->name }}</button>

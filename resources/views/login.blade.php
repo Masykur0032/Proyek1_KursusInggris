@@ -7,13 +7,13 @@
     <title>Login</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 </head>
-<body>
+<body style="background-color: #9587CF;">
     @include('layouts.nav')
     <div class="container">
         <div class="col-md-4 offset-md-4 mt-5">
             <div class="card">
-                <div class="card-header">
-                    <h3 class="text-center">Admin Login</h3>
+                <div class="card-header" style="background-color: #D8005F;">
+                    <h3 class="text-center" style="color: white;">Admin Login</h3>
                 </div>
                 <form action="{{ route('login') }}" method="post">
                 @csrf
@@ -43,11 +43,11 @@
                     @endif
                     <div class="form-group">
                         <label for=""><strong>Email</strong></label>
-                        <input type="text" name="email" class="form-control" placeholder="Email">
+                        <input type="text" name="email" class="form-control" placeholder="Email" style="border-color: #D8005F;">
                     </div>
                     <div class="form-group">
                         <label for=""><strong>Password</strong></label>
-                        <input type="password" name="password" class="form-control" placeholder="Password">
+                        <input type="password" name="password" class="form-control" placeholder="Password" style="border-color: #D8005F;">
                     </div>
                 </div>
                 <div class="card-footer">
